@@ -1,0 +1,16 @@
+{
+    "name": "staffim/splunk-bundle",
+    "description": "Bundle for Symfony2 that extends Monolog for SplunkStorm support",
+    "keywords": ["monolog", "splunk", "splunkstorm"],
+    "license": "MIT",
+    "type": "bundle",
+    "authors": [{"name": "Vyacheslav Salakhutdinov", "email": "megazoll@gmail.com"}],
+    "require": {
+        "symfony/monolog-bundle": "*",
+        "ext-curl": "*"
+    },
+    "autoload": {
+        "psr-0": {"Staffim\\SplunkBundle\\": ""}
+    },
+    "target-dir" : "Staffim/SplunkBundle"
+}
