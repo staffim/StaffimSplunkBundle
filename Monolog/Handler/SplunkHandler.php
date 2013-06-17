@@ -14,6 +14,7 @@ namespace Staffim\SplunkBundle\Monolog\Handler;
 use Staffim\SplunkBundle\StaffimSplunkBundle;
 use Monolog\Handler\AbstractProcessingHandler;
 use Monolog\Formatter\JsonFormatter;
+use Monolog\Logger;
 
 /**
  * A splunk log handler for Symfony.
