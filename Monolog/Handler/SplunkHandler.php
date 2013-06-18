@@ -77,11 +77,12 @@ class SplunkHandler extends AbstractProcessingHandler
         curl_setopt($ch, CURLOPT_USERAGENT, 'Staffim SplunkBundle ' . StaffimSplunkBundle::VERSION);
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $message);
-        curl_setopt($ch, CURLOPT_NOBODY, true);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         $result = curl_exec($ch);
+        $statusCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         curl_close($ch);
 
-        return $result;
+        return $statusCode == 200;
     }
 
     /**
